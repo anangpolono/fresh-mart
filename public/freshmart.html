@@ -1,0 +1,1953 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Fresh Mart – Pesan Potong Antar | Sudimampir, Hanum Dayeuhluhur
+    </title>
+    <meta
+      name="description"
+      content="Fresh Mart – Pesan Potong Antar. Sedia ayam hidup, cabut bulu, dan daging ayam segar. Melayani hajatan, syukuran, catering, rumah makan, warung, ecer & grosir. Antar ke lokasi Anda!"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --green-dark: #1a5c2a;
+        --green-main: #2a8a42;
+        --green-light: #3dbd5c;
+        --green-pale: #e8f7ec;
+        --orange: #f97316;
+        --orange-light: #fff7ed;
+        --white: #ffffff;
+        --gray-50: #f9fafb;
+        --gray-100: #f3f4f6;
+        --gray-200: #e5e7eb;
+        --gray-400: #9ca3af;
+        --gray-600: #4b5563;
+        --gray-800: #1f2937;
+        --text-main: #1a2e1e;
+        --radius-sm: 8px;
+        --radius-md: 14px;
+        --radius-lg: 22px;
+        --radius-xl: 32px;
+        --shadow-sm: 0 2px 8px rgba(42, 138, 66, 0.1);
+        --shadow-md: 0 6px 24px rgba(42, 138, 66, 0.14);
+        --shadow-lg: 0 16px 48px rgba(42, 138, 66, 0.18);
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        color: var(--text-main);
+        background: var(--white);
+        overflow-x: hidden;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "Poppins", sans-serif;
+        line-height: 1.2;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      /* ── UTILITY ── */
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      .section-title {
+        font-size: clamp(1.6rem, 3vw, 2.4rem);
+        font-weight: 800;
+        color: var(--green-dark);
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      .section-sub {
+        text-align: center;
+        color: var(--gray-600);
+        font-size: 1rem;
+        line-height: 1.6;
+        max-width: 560px;
+        margin: 0 auto 48px;
+      }
+      .badge {
+        display: inline-block;
+        background: var(--green-pale);
+        color: var(--green-dark);
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 6px 16px;
+        border-radius: 100px;
+        margin-bottom: 14px;
+      }
+
+      /* ── ANNOUNCEMENT BAR ── */
+      .announce-bar {
+        background: var(--green-dark);
+        color: var(--white);
+        text-align: center;
+        font-size: 0.83rem;
+        font-weight: 500;
+        padding: 10px 20px;
+        letter-spacing: 0.02em;
+      }
+      .announce-bar span {
+        color: #6ee47e;
+      }
+
+      /* ── NAVBAR ── */
+      .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.96);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--gray-200);
+        transition: box-shadow 0.3s;
+      }
+      .navbar.scrolled {
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+      }
+      .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 68px;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      .nav-logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .nav-logo .logo-icon {
+        width: 42px;
+        height: 42px;
+        background: var(--green-main);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4rem;
+      }
+      .nav-logo .logo-text {
+        line-height: 1;
+      }
+      .nav-logo .logo-text strong {
+        display: block;
+        font-family: "Poppins", sans-serif;
+        font-size: 1.15rem;
+        font-weight: 800;
+        color: var(--green-dark);
+      }
+      .nav-logo .logo-text small {
+        font-size: 0.72rem;
+        color: var(--orange);
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+        list-style: none;
+      }
+      .nav-links a {
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: var(--gray-600);
+        transition: color 0.2s;
+      }
+      .nav-links a:hover {
+        color: var(--green-main);
+      }
+      .nav-cta {
+        background: var(--green-main);
+        color: var(--white) !important;
+        padding: 10px 22px;
+        border-radius: 100px;
+        font-weight: 600 !important;
+        font-size: 0.88rem !important;
+        transition:
+          background 0.2s,
+          transform 0.2s !important;
+        box-shadow: 0 4px 12px rgba(42, 138, 66, 0.3);
+      }
+      .nav-cta:hover {
+        background: var(--green-dark) !important;
+        transform: translateY(-1px);
+      }
+
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        padding: 4px;
+        background: none;
+        border: none;
+      }
+      .hamburger span {
+        display: block;
+        width: 24px;
+        height: 2.5px;
+        background: var(--green-dark);
+        border-radius: 4px;
+        transition: 0.3s;
+      }
+
+      /* ── HERO ── */
+      .hero {
+        background: linear-gradient(
+          135deg,
+          #0d3b1a 0%,
+          #1a5c2a 50%,
+          #2a8a42 100%
+        );
+        min-height: 92vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        padding: 60px 0;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      }
+      .hero-blob {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(80px);
+        opacity: 0.25;
+      }
+      .hero-blob-1 {
+        width: 500px;
+        height: 500px;
+        background: #6ee47e;
+        top: -100px;
+        right: -100px;
+      }
+      .hero-blob-2 {
+        width: 300px;
+        height: 300px;
+        background: var(--orange);
+        bottom: -60px;
+        left: 10%;
+      }
+      .hero-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+      }
+      .hero-content {
+        color: var(--white);
+      }
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: #a7f3b4;
+        font-size: 0.8rem;
+        font-weight: 600;
+        padding: 7px 16px;
+        border-radius: 100px;
+        margin-bottom: 22px;
+        letter-spacing: 0.04em;
+      }
+      .hero-badge .dot {
+        width: 8px;
+        height: 8px;
+        background: #6ee47e;
+        border-radius: 50%;
+        animation: pulse 1.8s infinite;
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 0.5;
+          transform: scale(1.3);
+        }
+      }
+      .hero h1 {
+        font-size: clamp(2rem, 4.5vw, 3.6rem);
+        font-weight: 900;
+        line-height: 1.12;
+        margin-bottom: 20px;
+        letter-spacing: -0.02em;
+      }
+      .hero h1 em {
+        font-style: normal;
+        color: #6ee47e;
+      }
+      .hero p {
+        font-size: 1.05rem;
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.7;
+        margin-bottom: 36px;
+        max-width: 460px;
+      }
+      .hero-btns {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+      .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--orange);
+        color: var(--white);
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-size: 1rem;
+        padding: 14px 28px;
+        border-radius: 100px;
+        box-shadow: 0 8px 24px rgba(249, 115, 22, 0.4);
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+        cursor: pointer;
+        border: none;
+      }
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 32px rgba(249, 115, 22, 0.5);
+      }
+      .btn-secondary {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.12);
+        color: var(--white);
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 1rem;
+        padding: 14px 28px;
+        border-radius: 100px;
+        border: 1.5px solid rgba(255, 255, 255, 0.3);
+        transition: background 0.2s;
+        cursor: pointer;
+      }
+      .btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.2);
+      }
+      .hero-stats {
+        display: flex;
+        gap: 32px;
+        margin-top: 44px;
+        padding-top: 32px;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+      }
+      .hero-stat strong {
+        display: block;
+        font-family: "Poppins", sans-serif;
+        font-size: 1.7rem;
+        font-weight: 800;
+        color: #6ee47e;
+        line-height: 1;
+        margin-bottom: 4px;
+      }
+      .hero-stat span {
+        font-size: 0.82rem;
+        color: rgba(255, 255, 255, 0.6);
+        font-weight: 500;
+      }
+      .hero-image-wrap {
+        position: relative;
+      }
+      .hero-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: var(--radius-xl);
+        overflow: hidden;
+        position: relative;
+      }
+      .hero-card img {
+        width: 100%;
+        height: 440px;
+        object-fit: cover;
+        display: block;
+      }
+      .hero-card-badge {
+        position: absolute;
+        top: 18px;
+        left: 18px;
+        background: var(--orange);
+        color: var(--white);
+        font-size: 0.78rem;
+        font-weight: 700;
+        padding: 6px 14px;
+        border-radius: 100px;
+        letter-spacing: 0.04em;
+      }
+      .floating-tag {
+        position: absolute;
+        background: var(--white);
+        border-radius: 14px;
+        padding: 10px 16px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        animation: float 3s ease-in-out infinite;
+      }
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-8px);
+        }
+      }
+      .floating-tag.tag-1 {
+        bottom: -20px;
+        left: -30px;
+        animation-delay: 0s;
+      }
+      .floating-tag.tag-2 {
+        top: 24px;
+        right: -28px;
+        animation-delay: 1s;
+      }
+      .floating-tag .ft-icon {
+        font-size: 1.6rem;
+      }
+      .floating-tag .ft-text strong {
+        display: block;
+        font-size: 0.82rem;
+        font-weight: 700;
+        color: var(--text-main);
+      }
+      .floating-tag .ft-text span {
+        font-size: 0.72rem;
+        color: var(--gray-600);
+      }
+
+      /* ── MARQUEE ── */
+      .marquee-section {
+        background: var(--green-dark);
+        padding: 16px 0;
+        overflow: hidden;
+      }
+      .marquee-track {
+        display: flex;
+        gap: 0;
+        white-space: nowrap;
+        animation: marquee 20s linear infinite;
+      }
+      @keyframes marquee {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+      .marquee-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 0.88rem;
+        font-weight: 500;
+        padding: 0 30px;
+      }
+      .marquee-item .sep {
+        width: 6px;
+        height: 6px;
+        background: #6ee47e;
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+
+      /* ── PRODUK ── */
+      .products {
+        padding: 90px 0;
+        background: var(--white);
+      }
+      .products-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+      }
+      .product-card {
+        background: var(--white);
+        border: 1.5px solid var(--gray-200);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s,
+          border-color 0.3s;
+        cursor: pointer;
+      }
+      .product-card:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--shadow-lg);
+        border-color: var(--green-light);
+      }
+      .product-img-wrap {
+        position: relative;
+        background: var(--green-pale);
+      }
+      .product-img-wrap img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+      .product-label {
+        position: absolute;
+        top: 14px;
+        left: 14px;
+        background: var(--green-main);
+        color: var(--white);
+        font-size: 0.72rem;
+        font-weight: 700;
+        padding: 4px 12px;
+        border-radius: 100px;
+        letter-spacing: 0.04em;
+      }
+      .product-body {
+        padding: 22px;
+      }
+      .product-body h3 {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: var(--green-dark);
+        margin-bottom: 8px;
+      }
+      .product-body p {
+        font-size: 0.88rem;
+        color: var(--gray-600);
+        line-height: 1.6;
+        margin-bottom: 16px;
+      }
+      .product-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: var(--green-pale);
+        color: var(--green-dark);
+        font-size: 0.84rem;
+        font-weight: 600;
+        padding: 9px 18px;
+        border-radius: 100px;
+        transition:
+          background 0.2s,
+          color 0.2s;
+        border: none;
+        cursor: pointer;
+        font-family: inherit;
+      }
+      .product-cta:hover {
+        background: var(--green-main);
+        color: var(--white);
+      }
+
+      /* ── LAYANAN ── */
+      .services {
+        padding: 90px 0;
+        background: var(--gray-50);
+      }
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+      .service-card {
+        background: var(--white);
+        border-radius: var(--radius-lg);
+        padding: 30px 26px;
+        border: 1.5px solid var(--gray-200);
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s,
+          border-color 0.3s;
+      }
+      .service-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-md);
+        border-color: var(--green-light);
+      }
+      .service-icon {
+        width: 54px;
+        height: 54px;
+        border-radius: var(--radius-md);
+        background: var(--green-pale);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.7rem;
+        margin-bottom: 18px;
+      }
+      .service-card h3 {
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--green-dark);
+        margin-bottom: 8px;
+      }
+      .service-card p {
+        font-size: 0.86rem;
+        color: var(--gray-600);
+        line-height: 1.6;
+      }
+
+      /* ── KEUNGGULAN ── */
+      .features {
+        padding: 90px 0;
+        background: var(--white);
+      }
+      .features-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 70px;
+        align-items: center;
+      }
+      .features-img-wrap {
+        position: relative;
+      }
+      .features-img-wrap img {
+        width: 100%;
+        border-radius: var(--radius-xl);
+        object-fit: cover;
+        height: 460px;
+      }
+      .feat-badge-float {
+        position: absolute;
+        background: var(--white);
+        border-radius: var(--radius-md);
+        padding: 14px 18px;
+        box-shadow: var(--shadow-md);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .feat-badge-float.f1 {
+        bottom: 30px;
+        left: -24px;
+      }
+      .feat-badge-float.f2 {
+        top: 30px;
+        right: -24px;
+      }
+      .feat-badge-float .fb-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4rem;
+      }
+      .feat-badge-float .fb-icon.green {
+        background: var(--green-pale);
+      }
+      .feat-badge-float .fb-icon.orange {
+        background: var(--orange-light);
+      }
+      .feat-badge-float .fb-text strong {
+        display: block;
+        font-size: 0.88rem;
+        font-weight: 700;
+        color: var(--text-main);
+      }
+      .feat-badge-float .fb-text span {
+        font-size: 0.76rem;
+        color: var(--gray-600);
+      }
+      .features-content .section-title {
+        text-align: left;
+      }
+      .features-content .section-sub {
+        text-align: left;
+        margin: 0 0 32px;
+      }
+      .feat-list {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+      .feat-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 18px;
+        background: var(--gray-50);
+        border-radius: var(--radius-md);
+        border: 1px solid var(--gray-200);
+      }
+      .feat-check {
+        width: 32px;
+        height: 32px;
+        background: var(--green-main);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        color: var(--white);
+        font-size: 0.9rem;
+        font-weight: 800;
+      }
+      .feat-item-text strong {
+        display: block;
+        font-size: 0.92rem;
+        font-weight: 700;
+        color: var(--text-main);
+        margin-bottom: 3px;
+      }
+      .feat-item-text span {
+        font-size: 0.82rem;
+        color: var(--gray-600);
+        line-height: 1.5;
+      }
+
+      /* ── PELANGGAN ── */
+      .customers {
+        padding: 90px 0;
+        background: var(--green-pale);
+      }
+      .customers-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+      }
+      .customer-card {
+        background: var(--white);
+        border-radius: var(--radius-lg);
+        padding: 28px;
+        border: 1.5px solid var(--gray-200);
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+      }
+      .customer-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-md);
+      }
+      .cc-stars {
+        color: #f59e0b;
+        font-size: 1rem;
+        margin-bottom: 14px;
+      }
+      .customer-card p {
+        font-size: 0.88rem;
+        color: var(--gray-600);
+        line-height: 1.7;
+        margin-bottom: 18px;
+        font-style: italic;
+      }
+      .cc-author {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .cc-avatar {
+        width: 40px;
+        height: 40px;
+        background: var(--green-main);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--white);
+        font-weight: 700;
+        font-size: 0.9rem;
+        flex-shrink: 0;
+      }
+      .cc-author-info strong {
+        display: block;
+        font-size: 0.88rem;
+        font-weight: 700;
+        color: var(--text-main);
+      }
+      .cc-author-info span {
+        font-size: 0.76rem;
+        color: var(--gray-600);
+      }
+
+      /* ── CTA BAND ── */
+      .cta-band {
+        padding: 90px 0;
+        background: linear-gradient(135deg, #1a5c2a 0%, #2a8a42 100%);
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        color: var(--white);
+      }
+      .cta-band::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      }
+      .cta-band h2 {
+        font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+        font-weight: 900;
+        margin-bottom: 16px;
+        position: relative;
+      }
+      .cta-band p {
+        font-size: 1.05rem;
+        color: rgba(255, 255, 255, 0.8);
+        max-width: 500px;
+        margin: 0 auto 38px;
+        line-height: 1.7;
+        position: relative;
+      }
+      .cta-buttons {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        flex-wrap: wrap;
+        position: relative;
+      }
+      .btn-wa {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: #25d366;
+        color: var(--white);
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-size: 1.05rem;
+        padding: 15px 32px;
+        border-radius: 100px;
+        box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+        border: none;
+        cursor: pointer;
+      }
+      .btn-wa:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 32px rgba(37, 211, 102, 0.5);
+      }
+      .btn-wa svg {
+        width: 22px;
+        height: 22px;
+        fill: currentColor;
+      }
+      .btn-outline-white {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: transparent;
+        color: var(--white);
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 1rem;
+        padding: 15px 32px;
+        border-radius: 100px;
+        border: 2px solid rgba(255, 255, 255, 0.4);
+        transition: background 0.2s;
+        cursor: pointer;
+      }
+      .btn-outline-white:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      /* ── INFO ── */
+      .info-section {
+        padding: 90px 0;
+        background: var(--white);
+      }
+      .info-grid {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr;
+        gap: 50px;
+        align-items: start;
+      }
+      .info-map {
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        border: 2px solid var(--gray-200);
+      }
+      .info-map iframe {
+        width: 100%;
+        height: 380px;
+        border: none;
+        display: block;
+      }
+      .info-details h2 {
+        font-size: 1.7rem;
+        font-weight: 800;
+        color: var(--green-dark);
+        margin-bottom: 10px;
+      }
+      .info-details > p {
+        font-size: 0.9rem;
+        color: var(--gray-600);
+        line-height: 1.6;
+        margin-bottom: 28px;
+      }
+      .info-items {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      .info-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 16px 18px;
+        background: var(--gray-50);
+        border-radius: var(--radius-md);
+        border: 1px solid var(--gray-200);
+      }
+      .info-item-icon {
+        width: 42px;
+        height: 42px;
+        background: var(--green-pale);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        flex-shrink: 0;
+      }
+      .info-item-body strong {
+        display: block;
+        font-size: 0.88rem;
+        font-weight: 700;
+        color: var(--text-main);
+        margin-bottom: 3px;
+      }
+      .info-item-body span {
+        font-size: 0.82rem;
+        color: var(--gray-600);
+        line-height: 1.5;
+      }
+
+      /* ── FOOTER ── */
+      footer {
+        background: var(--text-main);
+        color: rgba(255, 255, 255, 0.7);
+        padding: 50px 0 28px;
+      }
+      .footer-inner {
+        display: grid;
+        grid-template-columns: 1.6fr 1fr 1fr;
+        gap: 50px;
+        margin-bottom: 40px;
+      }
+      .footer-brand .nav-logo .logo-text strong {
+        color: #6ee47e;
+      }
+      .footer-brand .nav-logo .logo-text small {
+        color: var(--orange);
+      }
+      .footer-brand p {
+        font-size: 0.86rem;
+        line-height: 1.7;
+        margin-top: 16px;
+        max-width: 300px;
+      }
+      .footer-col h4 {
+        font-family: "Poppins", sans-serif;
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: var(--white);
+        margin-bottom: 16px;
+      }
+      .footer-col ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .footer-col ul a {
+        font-size: 0.84rem;
+        color: rgba(255, 255, 255, 0.6);
+        transition: color 0.2s;
+      }
+      .footer-col ul a:hover {
+        color: #6ee47e;
+      }
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        font-size: 0.82rem;
+      }
+      .footer-bottom span {
+        color: #6ee47e;
+      }
+
+      /* ── WA FLOAT ── */
+      .wa-float {
+        position: fixed;
+        bottom: 28px;
+        right: 28px;
+        z-index: 9999;
+        background: #25d366;
+        color: var(--white);
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 6px 24px rgba(37, 211, 102, 0.5);
+        transition:
+          transform 0.25s,
+          box-shadow 0.25s;
+        cursor: pointer;
+      }
+      .wa-float:hover {
+        transform: scale(1.1);
+        box-shadow: 0 10px 32px rgba(37, 211, 102, 0.6);
+      }
+      .wa-float svg {
+        width: 30px;
+        height: 30px;
+        fill: var(--white);
+      }
+      .wa-tooltip {
+        position: fixed;
+        bottom: 98px;
+        right: 28px;
+        background: var(--white);
+        color: var(--text-main);
+        font-size: 0.82rem;
+        font-weight: 600;
+        padding: 8px 14px;
+        border-radius: 10px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+        white-space: nowrap;
+        display: none;
+        z-index: 9998;
+      }
+      .wa-tooltip::after {
+        content: "";
+        position: absolute;
+        bottom: -6px;
+        right: 22px;
+        width: 12px;
+        height: 12px;
+        background: var(--white);
+        transform: rotate(45deg);
+      }
+      .wa-float:hover + .wa-tooltip {
+        display: block;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 900px) {
+        .hero-inner {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+        .hero-image-wrap {
+          display: none;
+        }
+        .products-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .services-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .features-inner {
+          grid-template-columns: 1fr;
+        }
+        .features-img-wrap {
+          display: none;
+        }
+        .customers-grid {
+          grid-template-columns: 1fr;
+        }
+        .info-grid {
+          grid-template-columns: 1fr;
+        }
+        .footer-inner {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+      }
+      @media (max-width: 600px) {
+        .nav-links {
+          display: none;
+        }
+        .nav-links.open {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          top: 68px;
+          left: 0;
+          right: 0;
+          background: var(--white);
+          padding: 20px;
+          border-bottom: 1px solid var(--gray-200);
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+          gap: 16px;
+          z-index: 999;
+        }
+        .hamburger {
+          display: flex;
+        }
+        .products-grid {
+          grid-template-columns: 1fr;
+        }
+        .services-grid {
+          grid-template-columns: 1fr;
+        }
+        .hero-stats {
+          gap: 20px;
+        }
+      }
+
+      /* ── SCROLL ANIMATION ── */
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s ease;
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="announce-bar">
+      <span>&#x2714;</span> Buka Setiap Hari &nbsp;|&nbsp; Antar ke Lokasi Anda
+      &nbsp;|&nbsp; Melayani Ecer &amp; <span>Grosir / Partai Besar</span>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-inner">
+        <a href="#" class="nav-logo" aria-label="Fresh Mart Home">
+          <div class="logo-icon">&#x1F414;</div>
+          <div class="logo-text">
+            <strong>Fresh Mart</strong>
+            <small>Pesan Potong Antar</small>
+          </div>
+        </a>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#produk">Produk</a></li>
+          <li><a href="#layanan">Layanan</a></li>
+          <li><a href="#keunggulan">Keunggulan</a></li>
+          <li><a href="#info">Lokasi</a></li>
+          <li>
+            <a
+              href="https://wa.me/6285218387370?text=Halo%20Fresh%20Mart%2C%20saya%20ingin%20pesan%20ayam%20potong."
+              class="nav-cta"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Pesan Sekarang
+            </a>
+          </li>
+        </ul>
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero-blob hero-blob-1"></div>
+      <div class="hero-blob hero-blob-2"></div>
+      <div class="container">
+        <div class="hero-inner">
+          <div class="hero-content">
+            <div class="hero-badge">
+              <span class="dot"></span>
+              Sudimampir, Hanum Dayeuhluhur
+            </div>
+            <h1>
+              Ayam Segar &amp; <em>Berkualitas</em><br />Langsung ke Pintu Anda
+            </h1>
+            <p>
+              Dapatkan ayam hidup, cabut bulu, hingga daging ayam pilihan segar
+              setiap hari. Melayani ecer, grosir, catering, hajatan, dan
+              syukuran &mdash; antar ke lokasi Anda!
+            </p>
+            <div class="hero-btns">
+              <a
+                href="https://wa.me/6285218387370?text=Halo%20Fresh%20Mart%2C%20saya%20ingin%20memesan%20ayam%20potong."
+                class="btn-primary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"
+                  />
+                  <path
+                    d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.119 1.528 5.852L.057 23.75a.5.5 0 0 0 .614.612l6.013-1.543A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.925 0-3.726-.517-5.276-1.422l-.375-.22-3.895 1.001 1.032-3.794-.237-.389A9.96 9.96 0 0 1 2 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"
+                  />
+                </svg>
+                Chat WhatsApp
+              </a>
+              <a href="#produk" class="btn-secondary"> Lihat Produk &darr; </a>
+            </div>
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <strong>100+</strong>
+                <span>Pelanggan Setia</span>
+              </div>
+              <div class="hero-stat">
+                <strong>100%</strong>
+                <span>Ayam Segar</span>
+              </div>
+              <div class="hero-stat">
+                <strong>Fast</strong>
+                <span>Antar Hari Ini</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-image-wrap">
+            <div class="hero-card">
+              <div class="hero-card-badge">SEGAR SETIAP HARI</div>
+              <img
+                src="/assets/fresh-mart.jpg"
+                alt="Ayam segar siap potong di Fresh Mart dengan tampilan bersih dan menarik"
+              />
+            </div>
+            <div class="floating-tag tag-1">
+              <span class="ft-icon">&#x1F414;</span>
+              <div class="ft-text">
+                <strong>Ayam Segar</strong>
+                <span>Potong Hari Ini</span>
+              </div>
+            </div>
+            <div class="floating-tag tag-2">
+              <span class="ft-icon">&#x1F6D2;</span>
+              <div class="ft-text">
+                <strong>Antar ke Rumah</strong>
+                <span>Ecer &amp; Grosir</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee-section" aria-hidden="true">
+      <div class="marquee-track">
+        <!-- Duplicated for infinite loop -->
+        <span class="marquee-item"><span class="sep"></span>Ayam Hidup</span>
+        <span class="marquee-item"><span class="sep"></span>Cabut Bulu</span>
+        <span class="marquee-item"><span class="sep"></span>Daging Ayam</span>
+        <span class="marquee-item"
+          ><span class="sep"></span>Hajatan &amp; Syukuran</span
+        >
+        <span class="marquee-item"><span class="sep"></span>Catering</span>
+        <span class="marquee-item"><span class="sep"></span>Rumah Makan</span>
+        <span class="marquee-item"><span class="sep"></span>Warung</span>
+        <span class="marquee-item"
+          ><span class="sep"></span>Ecer &amp; Grosir</span
+        >
+        <span class="marquee-item"><span class="sep"></span>Partai Besar</span>
+        <span class="marquee-item"
+          ><span class="sep"></span>Antar ke Lokasi</span
+        >
+        <!-- duplicate -->
+        <span class="marquee-item"><span class="sep"></span>Ayam Hidup</span>
+        <span class="marquee-item"><span class="sep"></span>Cabut Bulu</span>
+        <span class="marquee-item"><span class="sep"></span>Daging Ayam</span>
+        <span class="marquee-item"
+          ><span class="sep"></span>Hajatan &amp; Syukuran</span
+        >
+        <span class="marquee-item"><span class="sep"></span>Catering</span>
+        <span class="marquee-item"><span class="sep"></span>Rumah Makan</span>
+        <span class="marquee-item"><span class="sep"></span>Warung</span>
+        <span class="marquee-item"
+          ><span class="sep"></span>Ecer &amp; Grosir</span
+        >
+        <span class="marquee-item"><span class="sep"></span>Partai Besar</span>
+        <span class="marquee-item"
+          ><span class="sep"></span>Antar ke Lokasi</span
+        >
+      </div>
+    </div>
+
+    <!-- PRODUK -->
+    <section class="products" id="produk">
+      <div class="container">
+        <span class="badge">Produk Kami</span>
+        <h2 class="section-title">Pilihan Produk Ayam Terbaik</h2>
+        <p class="section-sub">
+          Semua produk dipilih langsung dari sumber terbaik, segar, bersih, dan
+          siap untuk kebutuhan Anda.
+        </p>
+
+        <div class="products-grid">
+          <div class="product-card reveal">
+            <div class="product-img-wrap">
+              <div class="product-label">TERSEDIA</div>
+              <img
+                src="/assets/ayam-hidup.jpeg"
+                alt="Ayam hidup sehat dan aktif siap untuk dipilih pelanggan di Fresh Mart"
+              />
+            </div>
+            <div class="product-body">
+              <h3>Ayam Hidup</h3>
+              <p>
+                Ayam hidup pilihan, sehat, dan bebas penyakit. Bisa dipilih
+                langsung sesuai berat yang Anda inginkan.
+              </p>
+              <button class="product-cta" onclick="orderWA('Ayam Hidup')">
+                Pesan Sekarang &#8594;
+              </button>
+            </div>
+          </div>
+
+          <div class="product-card reveal">
+            <div class="product-img-wrap">
+              <div class="product-label">POPULER</div>
+              <img
+                src="/assets/cabut-bulu.jpeg"
+                alt="Ayam yang sudah dicabut bulunya bersih dan siap diolah"
+              />
+            </div>
+            <div class="product-body">
+              <h3>Ayam Cabut Bulu</h3>
+              <p>
+                Langsung bersih, tanpa perlu repot mencabut bulu sendiri. Siap
+                masak, hemat waktu dan tenaga.
+              </p>
+              <button class="product-cta" onclick="orderWA('Ayam Cabut Bulu')">
+                Pesan Sekarang &#8594;
+              </button>
+            </div>
+          </div>
+
+          <div class="product-card reveal">
+            <div class="product-img-wrap">
+              <div class="product-label">FRESH</div>
+              <img
+                src="/assets/daging-ayam.jpeg"
+                alt="Daging ayam segar dipotong sesuai pesanan di Fresh Mart"
+              />
+            </div>
+            <div class="product-body">
+              <h3>Daging Ayam</h3>
+              <p>
+                Daging ayam dipotong sesuai kebutuhan, bisa per potong atau per
+                kilogram. Segar dan berkualitas tinggi.
+              </p>
+              <button class="product-cta" onclick="orderWA('Daging Ayam')">
+                Pesan Sekarang &#8594;
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LAYANAN -->
+    <section class="services" id="layanan">
+      <div class="container">
+        <span class="badge">Layanan Kami</span>
+        <h2 class="section-title">Kami Melayani Berbagai Kebutuhan</h2>
+        <p class="section-sub">
+          Dari skala rumah tangga hingga acara besar, kami siap memenuhi semua
+          kebutuhan ayam potong Anda.
+        </p>
+
+        <div class="services-grid">
+          <div class="service-card reveal">
+            <div class="service-icon">&#x1F370;</div>
+            <h3>Hajatan &amp; Syukuran</h3>
+            <p>
+              Perlu ayam dalam jumlah banyak untuk acara hajatan atau syukuran?
+              Kami siap membantu, antar tepat waktu ke lokasi acara Anda.
+            </p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-icon">&#x1F37D;&#xFE0F;</div>
+            <h3>Catering</h3>
+            <p>
+              Supplier ayam terpercaya untuk usaha catering Anda. Stok selalu
+              tersedia, kualitas konsisten, dan bisa kirim rutin setiap hari.
+            </p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-icon">&#x1F35C;</div>
+            <h3>Rumah Makan &amp; Warung</h3>
+            <p>
+              Jadi pemasok tetap rumah makan dan warung Anda. Harga bersaing,
+              mutu terjaga, pengiriman tepat waktu setiap hari.
+            </p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-icon">&#x1F3E0;</div>
+            <h3>Keperluan Pribadi</h3>
+            <p>
+              Butuh ayam untuk masak di rumah? Beli eceran pun bisa, langsung
+              antar ke depan pintu rumah Anda.
+            </p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-icon">&#x1F4E6;</div>
+            <h3>Ecer &amp; Grosir</h3>
+            <p>
+              Harga spesial untuk pembelian grosir. Cocok untuk pedagang,
+              pengusaha kuliner, dan usaha makanan skala besar.
+            </p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-icon">&#x1F69A;</div>
+            <h3>Partai Besar</h3>
+            <p>
+              Melayani pemesanan partai besar untuk event, pabrik, atau
+              distributor. Hubungi kami untuk harga spesial dan negosiasi.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KEUNGGULAN -->
+    <section class="features" id="keunggulan">
+      <div class="container">
+        <div class="features-inner">
+          <div class="features-img-wrap reveal">
+            <img
+              src="/assets/fresh-mart.jpg"
+              alt="Interior toko Fresh Mart yang bersih, rapi, dan profesional"
+            />
+            <div class="feat-badge-float f1">
+              <div class="fb-icon green">&#x2714;&#xFE0F;</div>
+              <div class="fb-text">
+                <strong>Higienis &amp; Bersih</strong>
+                <span>Standar kebersihan tinggi</span>
+              </div>
+            </div>
+            <div class="feat-badge-float f2">
+              <div class="fb-icon orange">&#x1F4B0;</div>
+              <div class="fb-text">
+                <strong>Harga Terjangkau</strong>
+                <span>Bersaing di pasaran</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="features-content reveal">
+            <span class="badge">Kenapa Pilih Kami?</span>
+            <h2 class="section-title">Kepercayaan Adalah Prioritas Kami</h2>
+            <p class="section-sub">
+              Kami berkomitmen memberikan ayam terbaik dengan pelayanan yang
+              memuaskan dan harga yang bersahabat.
+            </p>
+
+            <div class="feat-list">
+              <div class="feat-item">
+                <div class="feat-check">&#x2713;</div>
+                <div class="feat-item-text">
+                  <strong>Ayam Segar Setiap Hari</strong>
+                  <span
+                    >Dipotong segar di hari yang sama, tidak ada stok beku yang
+                    tidak jelas.</span
+                  >
+                </div>
+              </div>
+              <div class="feat-item">
+                <div class="feat-check">&#x2713;</div>
+                <div class="feat-item-text">
+                  <strong>Bersih &amp; Higienis</strong>
+                  <span
+                    >Proses penyembelihan dan pengolahan dilakukan dengan
+                    standar kebersihan yang baik.</span
+                  >
+                </div>
+              </div>
+              <div class="feat-item">
+                <div class="feat-check">&#x2713;</div>
+                <div class="feat-item-text">
+                  <strong>Antar ke Lokasi Anda</strong>
+                  <span
+                    >Tidak perlu keluar rumah, kami antar langsung ke tempat
+                    Anda dengan cepat.</span
+                  >
+                </div>
+              </div>
+              <div class="feat-item">
+                <div class="feat-check">&#x2713;</div>
+                <div class="feat-item-text">
+                  <strong>Harga Bersaing</strong>
+                  <span
+                    >Harga ecer maupun grosir kompetitif, cocok untuk semua
+                    kalangan.</span
+                  >
+                </div>
+              </div>
+              <div class="feat-item">
+                <div class="feat-check">&#x2713;</div>
+                <div class="feat-item-text">
+                  <strong>Pesan Mudah via WhatsApp</strong>
+                  <span
+                    >Cukup chat WhatsApp, pesanan langsung diproses tanpa
+                    ribet.</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIAL -->
+    <section class="customers" id="testimoni">
+      <div class="container">
+        <span class="badge">Testimoni</span>
+        <h2 class="section-title">Kata Pelanggan Kami</h2>
+        <p class="section-sub">
+          Kepercayaan pelanggan adalah kebanggaan terbesar kami. Ini kata mereka
+          tentang Fresh Mart.
+        </p>
+
+        <div class="customers-grid">
+          <div class="customer-card reveal">
+            <div class="cc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>
+              "Sudah langganan sini buat warung saya. Ayamnya segar, bersih, dan
+              harganya pas di kantong. Pengirimannya juga tepat waktu, nggak
+              pernah telat!"
+            </p>
+            <div class="cc-author">
+              <div class="cc-avatar">IK</div>
+              <div class="cc-author-info">
+                <strong>Ibu Kodir</strong>
+                <span>Pemilik Warung Makan</span>
+              </div>
+            </div>
+          </div>
+          <div class="customer-card reveal">
+            <div class="cc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>
+              "Pesan untuk hajatan anak saya 200 ekor, semua berjalan lancar.
+              Tepat waktu, ayamnya bersih semua. Dianter sampai lokasi hajatan.
+              Recommended banget!"
+            </p>
+            <div class="cc-author">
+              <div class="cc-avatar">PH</div>
+              <div class="cc-author-info">
+                <strong>Pak Hendra</strong>
+                <span>Pelanggan Hajatan</span>
+              </div>
+            </div>
+          </div>
+          <div class="customer-card reveal">
+            <div class="cc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>
+              "Langganan rutin untuk catering. Stok selalu ada, kualitas tidak
+              pernah mengecewakan. Harga grosirnya juga sangat bersaing
+              dibanding tempat lain."
+            </p>
+            <div class="cc-author">
+              <div class="cc-avatar">IY</div>
+              <div class="cc-author-info">
+                <strong>Ibu Yati</strong>
+                <span>Pengusaha Catering</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BAND -->
+    <section class="cta-band">
+      <div class="container">
+        <h2>Siap Pesan? Hubungi Kami Sekarang!</h2>
+        <p>
+          Ecer, grosir, atau partai besar &mdash; kami siap melayani Anda. Antar
+          langsung ke lokasi Anda di mana pun di area Dayeuhluhur dan
+          sekitarnya.
+        </p>
+        <div class="cta-buttons">
+          <a
+            href="https://wa.me/6285218387370?text=Halo%20Fresh%20Mart%2C%20saya%20mau%20pesan%20ayam%20potong.%20Bisa%20dibantu%3F"
+            class="btn-wa"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"
+              />
+              <path
+                d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.119 1.528 5.852L.057 23.75a.5.5 0 0 0 .614.612l6.013-1.543A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.925 0-3.726-.517-5.276-1.422l-.375-.22-3.895 1.001 1.032-3.794-.237-.389A9.96 9.96 0 0 1 2 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"
+              />
+            </svg>
+            Chat via WhatsApp
+          </a>
+          <a href="tel:+6285218387370" class="btn-outline-white">
+            &#128222; Telepon Langsung
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFO / LOKASI -->
+    <section class="info-section" id="info">
+      <div class="container">
+        <span class="badge">Informasi Toko</span>
+        <h2 class="section-title">Lokasi &amp; Kontak Kami</h2>
+        <p class="section-sub">
+          Temukan kami di Sudimampir, Hanum Dayeuhluhur. Atau hubungi langsung
+          via WhatsApp untuk pesan antar.
+        </p>
+
+        <div class="info-grid">
+          <div class="info-map reveal">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15832.330203238946!2d108.63127008352798!3d-7.231424884393702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f7a9603a35577%3A0x72e76d535ccd13c9!2sSudimampir%2C%20Hanum%2C%20Dayeuhluhur%2C%20Cilacap%20Regency%2C%20Central%20Java!5e0!3m2!1sen!2sid!4v1773248831103!5m2!1sen!2sid"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Peta lokasi Fresh Mart di Sudimampir Hanum Dayeuhluhur"
+            ></iframe>
+          </div>
+
+          <div class="info-details reveal">
+            <h2>Fresh Mart</h2>
+            <p>
+              Toko ayam potong terpercaya di Sudimampir, Hanum Dayeuhluhur.
+              Melayani pesanan ecer hingga partai besar.
+            </p>
+
+            <div class="info-items">
+              <div class="info-item">
+                <div class="info-item-icon">&#x1F4CD;</div>
+                <div class="info-item-body">
+                  <strong>Alamat</strong>
+                  <span
+                    >Sudimampir, Hanum Dayeuhluhur,<br />Cilacap, Jawa
+                    Tengah</span
+                  >
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-item-icon">&#128222;</div>
+                <div class="info-item-body">
+                  <strong>Telepon / WhatsApp</strong>
+                  <span>
+                    <a
+                      href="https://wa.me/6281234567890"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style="color: var(--green-main); font-weight: 600"
+                    >
+                      +62 852-1838-7370
+                    </a>
+                  </span>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-item-icon">&#x23F0;</div>
+                <div class="info-item-body">
+                  <strong>Jam Operasional</strong>
+                  <span
+                    >Senin &ndash; Minggu<br />07.00 &ndash; 17.00 WIB (Buka
+                    Setiap Hari)</span
+                  >
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-item-icon">&#x1F69A;</div>
+                <div class="info-item-body">
+                  <strong>Area Pengiriman</strong>
+                  <span
+                    >Hanum, Dayeuhluhur, <br />dan sekitarnya (hubungi
+                    kami)</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <br />
+            <a
+              href="https://wa.me/6281234567890?text=Halo%20Fresh%20Mart%2C%20saya%20mau%20pesan%20ayam.%20Bisa%20dibantu%3F"
+              class="btn-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="display: inline-flex; align-items: center; gap: 8px"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"
+                />
+                <path
+                  d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.119 1.528 5.852L.057 23.75a.5.5 0 0 0 .614.612l6.013-1.543A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.925 0-3.726-.517-5.276-1.422l-.375-.22-3.895 1.001 1.032-3.794-.237-.389A9.96 9.96 0 0 1 2 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"
+                />
+              </svg>
+              Pesan via WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <div class="nav-logo">
+              <div
+                class="logo-icon"
+                style="
+                  background: var(--green-dark);
+                  border: 1px solid rgba(255, 255, 255, 0.2);
+                "
+              >
+                &#x1F414;
+              </div>
+              <div class="logo-text">
+                <strong>Fresh Mart</strong>
+                <small>Pesan Potong Antar</small>
+              </div>
+            </div>
+            <p>
+              Toko ayam potong segar &amp; terpercaya di Sudimampir, Hanum
+              Dayeuhluhur. Melayani ecer, grosir, hajatan, catering, dan lebih
+              banyak lagi.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4>Menu</h4>
+            <ul>
+              <li><a href="#produk">Produk Kami</a></li>
+              <li><a href="#layanan">Layanan</a></li>
+              <li><a href="#keunggulan">Keunggulan</a></li>
+              <li><a href="#testimoni">Testimoni</a></li>
+              <li><a href="#info">Lokasi &amp; Kontak</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Kontak</h4>
+            <ul>
+              <li>
+                <a
+                  href="https://wa.me/6285218387370"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  WhatsApp: +62 852-1838-7370
+                </a>
+              </li>
+              <li><a href="#">Sudimampir, Hanum, Dayeuhluhur</a></li>
+              <li><a href="#">Buka Setiap Hari 07.00–17.00</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 <span>Fresh Mart</span>. Semua Hak Dilindungi.</p>
+          <p>
+            Dibuat dengan <span>&#9829;</span> untuk kemudahan pelanggan kami.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WHATSAPP FLOAT BUTTON -->
+    <a
+      href="https://wa.me/6285218387370?text=Halo%20Fresh%20Mart%2C%20saya%20mau%20pesan%20ayam%20potong.%20Bisa%20dibantu%3F"
+      class="wa-float"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat WhatsApp Fresh Mart"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+      >
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"
+        />
+        <path
+          d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.119 1.528 5.852L.057 23.75a.5.5 0 0 0 .614.612l6.013-1.543A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.925 0-3.726-.517-5.276-1.422l-.375-.22-3.895 1.001 1.032-3.794-.237-.389A9.96 9.96 0 0 1 2 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"
+        />
+      </svg>
+    </a>
+    <div class="wa-tooltip">Pesan via WhatsApp!</div>
+
+    <script>
+      // ── NAVBAR SCROLL ──
+      const navbar = document.getElementById("navbar");
+      window.addEventListener("scroll", () => {
+        navbar.classList.toggle("scrolled", window.scrollY > 20);
+      });
+
+      // ── HAMBURGER MENU ──
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("nav-links");
+      hamburger.addEventListener("click", () => {
+        const isOpen = navLinks.classList.toggle("open");
+        hamburger.setAttribute("aria-expanded", isOpen);
+      });
+      navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("open");
+          hamburger.setAttribute("aria-expanded", "false");
+        });
+      });
+
+      // ── SCROLL REVEAL ──
+      const revealEls = document.querySelectorAll(".reveal");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12 },
+      );
+      revealEls.forEach((el) => observer.observe(el));
+
+      // ── ORDER WA ──
+      function orderWA(product) {
+        const msg = `Halo Fresh Mart, saya ingin memesan *${product}*. Bisa dibantu?`;
+        window.open(
+          `https://wa.me/6285218387370?text=${encodeURIComponent(msg)}`,
+          "_blank",
+        );
+      }
+
+      // ── SMOOTH SCROLL FOR ANCHOR LINKS ──
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          const href = this.getAttribute("href");
+          if (href === "#") return;
+          const target = document.querySelector(href);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
+      });
+
+      // ── PRODUCT CARD HOVER ANIMATION ──
+      document.querySelectorAll(".product-card").forEach((card) => {
+        card.addEventListener(
+          "mouseenter",
+          () => (card.style.transform = "translateY(-6px)"),
+        );
+        card.addEventListener("mouseleave", () => (card.style.transform = ""));
+      });
+
+      // ── COUNTER ANIMATION ──
+      function animateCounter(el, target, suffix) {
+        let current = 0;
+        const duration = 1500;
+        const step = target / (duration / 16);
+        const timer = setInterval(() => {
+          current += step;
+          if (current >= target) {
+            el.textContent = target + suffix;
+            clearInterval(timer);
+          } else {
+            el.textContent = Math.floor(current) + suffix;
+          }
+        }, 16);
+      }
+
+      const heroSection = document.getElementById("hero");
+      let counterDone = false;
+      const heroObserver = new IntersectionObserver(
+        (entries) => {
+          if (entries[0].isIntersecting && !counterDone) {
+            counterDone = true;
+            const stats = document.querySelectorAll(".hero-stat strong");
+            if (stats[0]) animateCounter(stats[0], 100, "+");
+            heroObserver.disconnect();
+          }
+        },
+        { threshold: 0.5 },
+      );
+      heroObserver.observe(heroSection);
+    </script>
+  </body>
+</html>
